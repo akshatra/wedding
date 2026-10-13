@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 225" preserveAspectRatio="none">
+  <defs>
+    <linearGradient id="gold" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#efd49a"/><stop offset="1" stop-color="#9d743e"/></linearGradient>
+    <linearGradient id="wine" x1="0" x2="0" y1="0" y2="1"><stop stop-color="#8b5560"/><stop offset="1" stop-color="#4f2937"/></linearGradient>
+    <g id="flower"><circle r="9" fill="#efd49a"/><circle cx="0" cy="-10" r="7" fill="#d5b575"/><circle cx="9" cy="-3" r="7" fill="#d5b575"/><circle cx="6" cy="8" r="7" fill="#d5b575"/><circle cx="-6" cy="8" r="7" fill="#d5b575"/><circle cx="-9" cy="-3" r="7" fill="#d5b575"/><circle r="4" fill="#74414d"/></g>
+    <g id="tassel"><path d="M-11 0h22l-3 26H-8Z" fill="url(#wine)"/><path d="M-8 27 0 38l8-11" fill="#d8b571"/><path d="M-7 6v22M0 4v29M7 6v22" stroke="#f1d59a" stroke-width="1" opacity=".65"/></g>
+  </defs>
+  <path d="M0 12H1440" stroke="#d8b571" stroke-width="3"/>
+  <path d="M0 26c100 92 180 92 290 2 110-90 214-89 330 0 112 86 210 86 324 0 111-85 213-87 326 0 65 50 116 58 170 50" fill="none" stroke="url(#gold)" stroke-width="3"/>
+  <path d="M0 43c100 71 181 70 280 1 100-70 207-69 318 0 104 65 208 65 315 0 105-64 207-65 316 0 77 47 147 53 211 30" fill="none" stroke="#cba969" stroke-width="1.4" opacity=".8"/>
+  <g stroke="#d8b571" stroke-width="1.5">
+    <path d="M105 20v58M290 20v102M485 20v61M720 20v115M950 20v61M1155 20v102M1335 20v58"/>
+  </g>
+  <g>
+    <g transform="translate(105 87)"><use href="#flower"/><path d="M0 12v24" stroke="#d8b571"/><use href="#tassel" transform="translate(0 35)"/></g>
+    <g transform="translate(290 131)"><use href="#flower"/><path d="M0 12v24" stroke="#d8b571"/><use href="#tassel" transform="translate(0 35)"/></g>
+    <g transform="translate(485 90)"><use href="#flower"/><path d="M0 12v24" stroke="#d8b571"/><use href="#tassel" transform="translate(0 35)"/></g>
+    <g transform="translate(720 144)"><use href="#flower"/><path d="M0 12v24" stroke="#d8b571"/><use href="#tassel" transform="translate(0 35)"/></g>
+    <g transform="translate(950 90)"><use href="#flower"/><path d="M0 12v24" stroke="#d8b571"/><use href="#tassel" transform="translate(0 35)"/></g>
+    <g transform="translate(1155 131)"><use href="#flower"/><path d="M0 12v24" stroke="#d8b571"/><use href="#tassel" transform="translate(0 35)"/></g>
+    <g transform="translate(1335 87)"><use href="#flower"/><path d="M0 12v24" stroke="#d8b571"/><use href="#tassel" transform="translate(0 35)"/></g>
+  </g>
+</svg>

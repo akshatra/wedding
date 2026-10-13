@@ -1,14 +1,14 @@
-/* Indian wedding palette: deep plum, antique gold, warm ivory, and sindoor. */
+/* Palette sampled from the couple's portrait: navy sherwani, champagne, sage foliage, and antique gold. */
 :root {
-  --plum: #301321;
-  --plum-deep: #200d17;
-  --ivory: #faf4e8;
-  --ivory-deep: #f2e7d3;
-  --gold: #d8b571;
-  --gold-deep: #99743b;
-  --wine: #812b3c;
-  --ink: #482b30;
-  --muted: #79615a;
+  --plum: #182736;
+  --plum-deep: #0d1a25;
+  --ivory: #fbf5ea;
+  --ivory-deep: #eee4d2;
+  --gold: #d7b580;
+  --gold-deep: #94734b;
+  --wine: #49645f;
+  --ink: #27333a;
+  --muted: #68716c;
   --serif: "Iowan Old Style", "Palatino Linotype", "Baskerville", Georgia, serif;
   --sans: "Avenir Next", "Segoe UI", Arial, sans-serif;
 }
@@ -29,7 +29,7 @@ a:focus-visible { outline: 2px solid var(--gold); outline-offset: 6px; }
 .skip-link { position: absolute; top: -100px; left: 10px; z-index: 10; padding: 12px; background: var(--ivory); color: var(--ink); }
 .skip-link:focus { top: 10px; }
 .invocation { padding: 9px 20px; background: var(--plum-deep); color: var(--gold); text-align: center; font-size: .85rem; letter-spacing: .06em; border-bottom: 1px solid #d8b57126; }
-.site-header { position: sticky; top: 0; z-index: 5; background: #301321f5; border-bottom: 1px solid #d8b57126; }
+.site-header { position: sticky; top: 0; z-index: 5; background: #281827f5; border-bottom: 1px solid #d8b57135; }
 .nav { display: flex; align-items: center; justify-content: space-between; gap: 20px; min-height: 78px; }
 .monogram { color: var(--gold); font: 1.85rem/1 var(--serif); text-decoration: none; letter-spacing: -.04em; }
 .monogram span { padding-inline: 5px; font-size: .65em; font-style: italic; }
@@ -39,8 +39,12 @@ a:focus-visible { outline: 2px solid var(--gold); outline-offset: 6px; }
 .nav-links a:hover { color: var(--gold); }
 .nav-date { color: var(--gold); }
 
-.hero { position: relative; display: grid; grid-template-columns: 1.12fr 1fr; align-items: center; gap: 70px; padding-block: 54px 85px; }
-.hero-copy { padding-block: 25px; }
+.hero { position: relative; display: grid; grid-template-columns: 1.12fr 1fr; align-items: center; gap: 70px; padding-block: 54px 112px; overflow: hidden; isolation: isolate; }
+.hero-copy, .hero-portrait, .scroll-cue { z-index: 1; }
+.hero-copy { padding: 95px 0 25px; }
+.jhalar { position: absolute; z-index: 2; top: 0; left: -7%; width: 114%; height: 118px; opacity: .68; pointer-events: none; user-select: none; }
+.mountain-range { position: absolute; display: block; pointer-events: none; user-select: none; }
+.mountain-range-hero { z-index: -1; right: -12%; bottom: 0; left: -12%; width: 124%; height: 220px; opacity: .45; }
 .tiny-star { font-size: 1.25rem; margin-right: 8px; vertical-align: middle; }
 .hero h1 { margin-top: 20px; font-size: clamp(4rem, 7.5vw, 7.2rem); line-height: .95; letter-spacing: -.065em; }
 .ampersand { display: block; margin: 7px 0 3px 38px; color: var(--gold); font-size: .55em; font-style: italic; letter-spacing: 0; }
@@ -77,6 +81,8 @@ a:focus-visible { outline: 2px solid var(--gold); outline-offset: 6px; }
 .timer-number { font: 3.05rem/1.15 var(--serif); color: var(--gold); font-variant-numeric: tabular-nums; }
 .timer-label { font-size: .52rem; letter-spacing: .18em; text-transform: uppercase; margin-top: 7px; color: #ddcbb8; }
 .timer-colon { color: #b7956059; font: 2rem/1.5 var(--serif); }
+.mountain-divider { height: 72px; overflow: hidden; background: var(--ivory-deep); line-height: 0; }
+.mountain-divider img { width: 100%; height: 100%; object-fit: cover; object-position: center bottom; opacity: .18; filter: sepia(.45); }
 
 .invitation { color: var(--ink); background: var(--ivory); text-align: center; position: relative; overflow: hidden; }
 .invitation::before, .invitation::after { position: absolute; content: ""; width: 230px; height: 230px; border: 1px solid #b38b4726; border-radius: 50%; box-shadow: 0 0 0 20px #b38b4706, 0 0 0 40px #b38b4706; }
@@ -94,7 +100,7 @@ a:focus-visible { outline: 2px solid var(--gold); outline-offset: 6px; }
 .family-amp { font: italic 2.5rem var(--serif); color: var(--gold-deep); }
 .hindi-note { margin-top: 28px; color: var(--gold-deep); font-size: .9rem; }
 
-.celebrations { background: var(--ivory-deep); color: var(--ink); }
+.celebrations { background: linear-gradient(180deg, #eee4d2 0%, #f8f2e7 100%); color: var(--ink); }
 .section-heading { text-align: center; margin-bottom: 45px; }
 .section-heading h2 { margin-block: 10px 14px; }
 .section-heading > p:last-child { color: var(--muted); font-size: .9rem; }
@@ -115,6 +121,8 @@ a:focus-visible { outline: 2px solid var(--gold); outline-offset: 6px; }
 
 
 .closing { position: relative; overflow: hidden; text-align: center; border-top: 1px solid #d8b57140; }
+.closing > .wrap { position: relative; z-index: 1; }
+.mountain-range-closing { z-index: 0; right: 0; bottom: 0; left: 0; width: 100%; height: 170px; opacity: .21; }
 .closing::before, .closing::after { content: ""; position: absolute; width: 300px; height: 300px; border: 1px solid #d8b57125; border-radius: 50%; box-shadow: 0 0 0 30px #d8b57105, 0 0 0 60px #d8b57105; }
 .closing::before { top: -220px; left: -130px; }
 .closing::after { bottom: -220px; right: -130px; }
@@ -142,7 +150,9 @@ footer a { display: inline-block; padding: 12px; margin-top: 8px; color: var(--g
   .nav a:not(.monogram) { font-size: .57rem; letter-spacing: .07em; }
   .nav-date { display: none; }
   .hero { grid-template-columns: 1fr; gap: 28px; padding-top: 28px; padding-bottom: 68px; }
-  .hero-copy { text-align: center; padding: 0; }
+  .jhalar { left: -18%; width: 136%; height: 78px; opacity: .55; }
+  .mountain-range-hero { height: 145px; opacity: .34; }
+  .hero-copy { text-align: center; padding: 92px 0 0; }
   .hero .eyebrow { font-size: .56rem; letter-spacing: .13em; }
   .hero h1 { font-size: clamp(3.8rem, 14vw, 6rem); }
   .ampersand { display: block; margin: 5px 0; font-size: .45em; }
@@ -154,6 +164,7 @@ footer a { display: inline-block; padding: 12px; margin-top: 8px; color: var(--g
   .hero-portrait { width: calc(100% - 20px); max-width: 390px; padding: 9px; }
   .hero-portrait figcaption { font-size: .52rem; }
   .countdown { padding-block: 32px; }
+  .mountain-divider { height: 45px; }
   .countdown h2 { font-size: 1.6rem; }
   .timer { gap: 10px; justify-content: center; width: 100%; }
   .timer-number { font-size: 2.65rem; }
